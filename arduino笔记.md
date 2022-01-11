@@ -2,15 +2,19 @@
 ####arduino语法
 arduino完全采用C/C++的语法规则，可直接使用C/C++的语法来编写代码。
 ####设置引脚模式
-> pinMode(引脚，模式)   
+> pinMode(pin，mode)   
 
-其中模式有OUTPUT(输出模式)和INPUT（输入模式）。
+其中mode有OUTPUT(输出模式)和INPUT（输入模式）。
 
 ####改变引脚电位
-> digitalWrite（引脚，电位）
+> digitalWrite（pin，value）
 
-其中电位有高电平（HIGH或1）和低电平（LOW或0）。
+其中value有高电平（HIGH或1）、低电平（LOW或0）和输入上拉模式（INPUT_PULLUP ）。
 
+####读取引脚状态
+ > digitalRead(pin)函数
+
+ 读取pin引脚的信号状态并且返回。
 ####等待
  > delay(time)函数
 
