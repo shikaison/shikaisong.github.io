@@ -93,4 +93,21 @@ mode：中断模式
 
 ###串口通信
 #####串口配置
-> 
+使用串口与计算机通信，需要先使用Serial.begin() 初始化Arduino的串口通信功能.
+> Serial.begin(speed)
+Serial.begin(speed, config)
+
+speed：波特率
+config：数据位、校验位、停止位配置
+初始化串口，可配置串口的各项参数，无返回值。
+
+####串口输出
+> Serial.print(val)
+Serial.println(val)
+
+val是要输出的数据，各种类型的数据均可.println会在输出完指定数据后，再输出一组回车换行符。
+
+####串口输入
+> Serial.read()
+
+接收串口数据需要使用Serial.read()函数。调用该语句，每次都会返回一个字节的数据，这个返回值便是当前串口读取到的数据。
