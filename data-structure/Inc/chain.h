@@ -53,9 +53,10 @@ void chainPrintf(chain_nood *L);
  * @param L 结构体指针，指向单链表中第一个结点
  * @param i 表示查找的结点的逻辑位置
  * @param e 接受查找到的值域
- * @return float 将查找到的结点的data值域的值返回
+ * @return true 查找成功
+ * @return flase 查找失败
  */
-float chainGet(chain_nood *L,int i, float &e);
+bool chainGet(chain_nood *L,int i, float &e);
 
 /**
  * @brief 在单链表L中从头开始找第一个值域与e相等的结点
