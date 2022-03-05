@@ -3,10 +3,12 @@
 #include <stdio.h>
 
 
-/**@brief 代码主函数入口
+/**
+ * @brief 主函数入口
  * 
+ * @return 
  */
-int main()
+int main(void)
 {
     return 0;
 }
