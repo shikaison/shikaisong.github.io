@@ -1,5 +1,5 @@
 #include "chain.h"
-
+/**********************单链表******************/
 /**
  * @brief 创建单链表的表头
  * 
@@ -228,3 +228,21 @@ void chainCreateTail(chain_nood *&L, float s[], int n)
     }
     r->next=NULL;
 }
+
+
+/*******************************双链表**************************/
+
+
+/**
+ * @brief 创建一个空的双链表
+ * 
+ * @param L 
+ */
+void chain_two(chain_nood_two *&L)
+{
+    L=(chain_nood_two *)malloc(sizeof(chain_nood_two));
+    L->next=NULL;
+    L->before=NULL;
+}
+
+

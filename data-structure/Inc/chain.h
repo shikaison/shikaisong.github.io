@@ -1,4 +1,4 @@
-/*包含了线性表中单链表的相关函数*/
+/*包含了线性表中单链表和双链表的相关函数*/
 #ifndef __CHAIN_H__
 #define __CHAIN_H__
 
@@ -8,6 +8,14 @@ typedef struct noods
     float data;
     struct noods next;
 }chain_nood;
+
+typedef struct chain
+{
+    /* data */
+    float data;
+    struct chain *before;
+    struct chain *next;
+}chain_nood_two;
 
 
 /**
@@ -105,6 +113,8 @@ void chainCreateHead(chain_nood *&L, float s[], int n);
  * @param n 数组长度，同时为结点长度
  */
 void chainCreateTail(chain_nood *&L, float s[], int n);
+
+
 
 
 #endif
