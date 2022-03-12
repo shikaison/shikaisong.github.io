@@ -16,7 +16,7 @@ def huaban(ls):
 
     plt.subplots_adjust(wspace=0.9, hspace=0.9)  # 调整子图间距
     # 建立坐标系
-    ax1.set(xlim=[-1.0, 1.0], ylim=[-1.0, 1.0], title=ls[0], ylabel='Y', xlabel='X')
+    ax1.set(xlim=[0.0, 1.0], ylim=[0.0, 40.0], title=ls[0], ylabel='I', xlabel='COS^')
     ax2.set(xlim=[-1.0, 1.0], ylim=[-1.0, 1.0], title=ls[1], ylabel='Y', xlabel='X')
     ax3.set(xlim=[-10.0, 10.0], ylim=[-10.0, 10.0], title=ls[2], ylabel='Y', xlabel='X')
     ax4.set(xlim=[-10.0, 10.0], ylim=[-10.0, 10.0], title=ls[3], ylabel='Y', xlabel='X')

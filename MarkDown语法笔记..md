@@ -92,7 +92,7 @@ Markdown 区块引用是在段落开头使用 > 符号 ，然后后面紧跟一�
     > 区块二
 
 ###代码
-段落上的一个函数或片段的代码可以用反引号把它包起来（），例如：
+段落上的一个函数或片段的代码可以用反引号把它包起来，例如：
 `printf()`函数
 `scanf()`函数
 
@@ -119,12 +119,12 @@ print("晓晓是憨憨")
 使用尖括号可以很方便地把URL或者email地址变成可点击的链接。
 <https://github.com/shikaison/shikaison.github.io.git>
 ####强调链接
-强调 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。
+强调链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。
 I love supporting the **[EFF](https://eff.org)**.
 This is the *[Markdown Guide](https://www.markdownguide.org)*.
 See the section on [`code`](#code).
 
-####引用类型链接：暂代理解中
+####引用类型链接：暂代了解中
 
 ###图片
 插入图片Markdown语法代码：![图片alt](图片链接 "图片title")。
@@ -137,7 +137,7 @@ See the section on [`code`](#code).
 <需要写成"&amp;lt;"
 &需要写成"&amp;amp"
 "需要写成”&amp;quot;"
->需要写成"&amp;gt;"
+\>需要写成"&amp;gt;"
 不断开空格(non-breaking space)需要写成"&amp;nbsp;"
 
 ###制表
@@ -155,4 +155,31 @@ Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔�
 | 单元格 | 单元格 | 单元格 |
 | 单元格 | 单元格 | 单元格 |
 
-###数学公式，暂代了解
+###数学公式
+|字母	    |实现	    |字母	    |实现|
+|:---       |:--        |:--        |:--
+|A	        |A	        |αα	        |\alhpa|
+|B	        |B	        |ββ	        |\beta|
+|Γ	        |\Gamma	    |γγ	        |\gamma|
+|Δ	        |\Delta	    |δδ	        |\delta|
+|E	        |E	        |ϵϵ	        |\epsilon|
+|Z	        |Z	        |ζζ	        |\zeta|
+|H	        |H	        |ηη	        |\eta|
+|Θ	        |\Theta	    |θθ	        |\theta|
+|I	        |I	        |ιι	        |\iota|
+|K	        |K	        |κκ	        |\kappa|
+|Λ	        |\Lambda	|λλ	        |\lambda|
+|M	        |M	        |μμ	        |\mu|
+|N	        |N	        |νν	        |\nu|
+|Ξ	        |\Xi	    |ξξ	        |\xi|
+|O	        |O	        |οο	        |\omicron|
+|Π	        |\Pi	    |ππ	        |\pi|
+|P	        |P	        |ρρ	        |\rho|
+|Σ	        |\Sigma	    |σσ	        |\sigma|
+|T	        |T	        |ττ	        |\tau|
+|Υ	        |\Upsilon	|υυ	        |\upsilon|
+|Φ	        |\Phi	    |ϕϕ	        |\phi|
+|X	        |X	        |χχ     	|\chi|
+|Ψ	        |\Psi	    |ψψ	        |\psi|
+|Ω	        |\v	        |ωω	        |\omega|
+
