@@ -1,6 +1,7 @@
 /*包含了线性表中单链表和双链表的相关函数*/
 #ifndef __CHAIN_H__
 #define __CHAIN_H__
+#include <sdlib.h>
 
 typedef struct noods
 {
