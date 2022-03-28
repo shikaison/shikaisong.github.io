@@ -1,7 +1,7 @@
 #ifndef __CHAIN_STACK_H__
 #define __CHAIN_STACK_H__
-#include <sdlib.h>
-#define ElemType float
+
+typedef  float ElemType;
 #define MaxSize 10000
 
 

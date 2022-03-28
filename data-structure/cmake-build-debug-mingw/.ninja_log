@@ -1,0 +1,20 @@
+# ninja log v5
+0	101	6701448148340991	CMakeFiles/data_structure.dir/linear-list/stack.c.obj	17ead8ca62d69202
+13	80	6701449011868762	CMakeFiles/data_structure.dir/linear-list/chain_stack.c.obj	9258f25456f42f05
+7	81	6701449638594459	CMakeFiles/data_structure.dir/main.c.obj	23c43d24f9f5bece
+1	83	6701449638594459	CMakeFiles/data_structure.dir/linear-list/order.c.obj	c4ee2015a09fef9c
+13	95	6701449912971931	CMakeFiles/data_structure.dir/linear-list/stack.c.obj	17ead8ca62d69202
+30	101	6701450074834706	CMakeFiles/data_structure.dir/linear-list/chain_stack.c.obj	9258f25456f42f05
+2	105	6701450074834706	CMakeFiles/data_structure.dir/main.c.obj	23c43d24f9f5bece
+9	118	6701450075034699	CMakeFiles/data_structure.dir/linear-list/stack.c.obj	17ead8ca62d69202
+14	124	6701450075034699	CMakeFiles/data_structure.dir/linear-list/order.c.obj	c4ee2015a09fef9c
+2	94	6701450614292632	CMakeFiles/data_structure.dir/linear-list/chain.c.obj	69c1c5dfbd852e3a
+94	248	6701450615755091	data_structure.exe	61dd25b29e24bdfe
+7	85	6701451045460850	CMakeFiles/data_structure.dir/main.c.obj	23c43d24f9f5bece
+1	85	6701451045460850	CMakeFiles/data_structure.dir/linear-list/order.c.obj	c4ee2015a09fef9c
+12	150	6701451046160852	CMakeFiles/data_structure.dir/linear-list/chain.c.obj	69c1c5dfbd852e3a
+150	230	6701451046960845	data_structure.exe	61dd25b29e24bdfe
+1	75	6701451149171162	CMakeFiles/data_structure.dir/linear-list/order.c.obj	c4ee2015a09fef9c
+75	154	6701451149971172	data_structure.exe	61dd25b29e24bdfe
+2	76	6701451488425208	CMakeFiles/data_structure.dir/linear-list/order.c.obj	c4ee2015a09fef9c
+77	158	6701451489225203	data_structure.exe	61dd25b29e24bdfe

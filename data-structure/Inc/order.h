@@ -1,7 +1,7 @@
 /*包含了线性表中顺序表相关函数*/
 #ifndef __ORDER_H__
 #define __ORDER_H__
-
+#include "main.h"
 /*include strat*/
 
 
@@ -71,6 +71,6 @@ int ListDelete(list *L,int i,int *e);
   *@param    L  一个@list 类型的结构体
   * 
   */
-int ListLength(L);
+int ListLength(list L);
 
 #endif

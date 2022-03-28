@@ -1,3 +1,4 @@
+
 #include "stack.h"
 /***************用数组实现的顺序栈******************/
 
@@ -13,7 +14,7 @@ typedef struct stack
  * 
  * @param S 指向栈的指针
  */
-void InitStack(SqStack *&s)
+void InitStack(SqStack *s)
 {
     s=(SqStack *)malloc(sizeof(SqStack));
     s->top=-1;
@@ -24,7 +25,7 @@ void InitStack(SqStack *&s)
  * 
  * @param s 指向栈的指针
  */
-void DestoryStack(SqStack &s)
+void DestoryStack(SqStack *s)
 {
     free(s);
 }
@@ -49,7 +50,7 @@ bool StackEmpty(SqStack *s)
  * @return true 插入成功
  * @return false 插入失败
  */
-bool Push(SqStack *&s, ElemType e)
+bool Push(SqStack *s, ElemType e)
 {
     if(s->top==MaxSize-1)
         return false;
@@ -66,11 +67,11 @@ bool Push(SqStack *&s, ElemType e)
  * @return true 出栈成功
  * @return false 出栈失败
  */
-bool Pop(SqStack *&s, ElemType &e)
+bool Pop(SqStack *s, ElemType *e)
 {
     if(s->top==-1)
         return false;
-    e=s->data[s->top];
+    *e=s->data[s->top];
     s->top--;
     return true;
 }
@@ -83,11 +84,11 @@ bool Pop(SqStack *&s, ElemType &e)
  * @return true 取出成功
  * @return false 取出失败
  */
-bool GetTop(SqStack *s, ElemType &e)
+bool GetTop(SqStack *s, ElemType *e)
 {
     if(s->top==-1)
         return false;
-    e=s->data[s->top];
+    *e=s->data[s->top];
     return true;
 }
 

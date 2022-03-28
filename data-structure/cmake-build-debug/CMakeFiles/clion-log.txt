@@ -1,0 +1,38 @@
+"D:\Toolbox App\apps\CLion\ch-0\213.7172.20\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/ninja/win/ninja.exe" -DCMAKE_C_COMPILER=D:/Allfiles/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe -DCMAKE_CXX_COMPILER=D:/Allfiles/gcc-arm-none-eabi/bin/arm-none-eabi-g++.exe -G Ninja E:\clion\data-structure
+-- The C compiler identification is GNU 10.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: D:/Allfiles/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+-- Check for working C compiler: D:/Allfiles/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe - broken
+CMake Error at D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "D:/Allfiles/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: E:/clion/data-structure/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/ninja/win/ninja.exe cmTC_a449e && [1/2] Building C object CMakeFiles/cmTC_a449e.dir/testCCompiler.c.obj
+    [2/2] Linking C executable cmTC_a449e.exe
+    FAILED: cmTC_a449e.exe 
+    cmd.exe /C "cd . && D:\Allfiles\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_a449e.dir/testCCompiler.c.obj -o cmTC_a449e.exe -Wl,--out-implib,libcmTC_a449e.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+    d:/allfiles/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+    d:/allfiles/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+    collect2.exe: error: ld returned 1 exit status
+    ninja: build stopped: subcommand failed.
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "E:/clion/data-structure/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "E:/clion/data-structure/cmake-build-debug/CMakeFiles/CMakeError.log".

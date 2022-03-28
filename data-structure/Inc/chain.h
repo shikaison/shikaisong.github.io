@@ -1,13 +1,15 @@
 /*包含了线性表中单链表和双链表的相关函数*/
 #ifndef __CHAIN_H__
 #define __CHAIN_H__
-#include <sdlib.h>
+#include "main.h"
+#include <stdbool.h>
+typedef float  ElemType;
 
 typedef struct noods
 {
     /* data */
     float data;
-    struct noods next;
+    struct noods *next;
 }chain_nood;
 
 typedef struct chain
@@ -25,7 +27,7 @@ typedef struct chain
  * 
  * @param L 结构体指针，指向单链表中头结点
  */
-void chianInit(chain_nood *&L);
+void chianInit(chain_nood *L);
 
 /**
  * @brief 判断单链表是否为空
@@ -40,7 +42,7 @@ int chainEmpty(chain_nood *L);
  * 
  * @param L 结构体指针，指向单链表中头结点
  */
-void chainClear(chain_nood *&L);
+void chainClear(chain_nood *L);
 
 /**
  * @brief 计算单链表的长度
@@ -66,7 +68,7 @@ void chainPrintf(chain_nood *L);
  * @return true 查找成功
  * @return flase 查找失败
  */
-bool chainGet(chain_nood *L,int i, float &e);
+bool chainGet(chain_nood *L,int i, float *e);
 
 /**
  * @brief 在单链表L中从头开始找第一个值域与e相等的结点
@@ -86,7 +88,7 @@ int chainLocate(chain_nood *L,float e);
  * @return true 插入成功
  * @return false 插入失败
  */
-bool chaininsert(chain_nood *&L,int i, float e);
+__attribute__((unused)) bool Chaininsert(chain_nood *L,int i, float e);
 
 /**
  * @brief 删除第i个结点，并释放其空间
@@ -96,7 +98,7 @@ bool chaininsert(chain_nood *&L,int i, float e);
  * @return true 删除成功
  * @return false 删除失败
  */
-bool chainDeleta(chain_nood *&L, int i);
+bool chainDeleta(chain_nood *L, int i);
 
 /**
  * @brief 头插法建立单链表
@@ -105,7 +107,7 @@ bool chainDeleta(chain_nood *&L, int i);
  * @param s 保存每个结点值域的数组
  * @param n 数组长度，同时为结点长度
  */
-void chainCreateHead(chain_nood *&L, float s[], int n);
+void chainCreateHead(chain_nood *L, float s[], int n);
 
 /**
  * @brief 尾插法建立单链表
@@ -114,7 +116,7 @@ void chainCreateHead(chain_nood *&L, float s[], int n);
  * @param s 保存每个结点值域的数组
  * @param n 数组长度，同时为结点长度
  */
-void chainCreateTail(chain_nood *&L, float s[], int n);
+void chainCreateTail(chain_nood *L, float s[], int n);
 
 /***********************************双链表*****************************/
 /**
@@ -122,7 +124,7 @@ void chainCreateTail(chain_nood *&L, float s[], int n);
  * 
  * @param L 
  */
-void chain_two(chain_nood_two *&L);
+void chain_two(chain_nood_two *L);
 
 /**
  * @brief 头接法创建双链表
@@ -131,7 +133,7 @@ void chain_two(chain_nood_two *&L);
  * @param a 
  * @param n 
  */
-void CreateListF(chain_nood_two *&L,float a[],int n);
+void CreateListF(chain_nood_two *L,float a[],int n);
 
 /**
  * @brief 尾接法创建双链表
@@ -140,7 +142,7 @@ void CreateListF(chain_nood_two *&L,float a[],int n);
  * @param a 储存结点内容的数组
  * @param n 结点个数
  */
-void CreateListR(chain_nood_two *&L,ElemType a[],int n);
+void CreateListR(chain_nood_two *L,ElemType a[],int n);
 
 /**
  * @brief 向双链表中的指定位置插入结点
@@ -151,7 +153,7 @@ void CreateListR(chain_nood_two *&L,ElemType a[],int n);
  * @return true 插入成功
  * @return false 插入失败
  */
-bool ListInsert(chain_nood_two *&L,int i,float e);
+static bool Listinsert(chain_nood_two *L,int i,float e);
 
 /**
  * @brief 删除双链表中的指定结点
@@ -162,7 +164,8 @@ bool ListInsert(chain_nood_two *&L,int i,float e);
  * @return true 删除失败
  * @return false 删除成功
  */
-bool ListDelete(chain_nood_two *&L,int i,float &e);
+static bool Listdelete(chain_nood_two *L,int i,float *e);
+
 
 
 

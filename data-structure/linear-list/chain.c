@@ -1,11 +1,12 @@
 #include "chain.h"
+
 /**********************单链表******************/
 /**
  * @brief 创建单链表的表头
  * 
  * @param L 结构体指针，指向单链表中头结点
  */
-void chianInit(chain_nood *&L)
+void chianInit(chain_nood *L)
 {
     L=(chain_nood *)malloc(sizeof(chain_nood)); 
     L->next=NULL;
@@ -29,7 +30,7 @@ int chainEmpty(chain_nood *L)
  * 
  * @param L 结构体指针，指向单链表中头结点
  */
-void chainClear(chain_nood *&L)
+void chainClear(chain_nood *L)
 {
     chain_nood *p,*pre=L;
     p=L->next;
@@ -71,7 +72,7 @@ void chainPrintf(chain_nood *L)
 {
     while(L->next != NULL)
     {
-        peintf("%f",L->data);
+        printf("%f",L->data);
     }
 }
 
@@ -84,7 +85,7 @@ void chainPrintf(chain_nood *L)
  * @return true 查找成功
  * @return flase 查找失败
  */
-bool chainGet(chain_nood *L,int i, float &e)
+bool chainGet(chain_nood *L,int i, float *e)
 {
     int n;
     while(n>i && L->next != NULL)
@@ -93,10 +94,10 @@ bool chainGet(chain_nood *L,int i, float &e)
         L=L->next;
     }
     if(L->next != NULL)
-        return flase;
+        return false;
     else
     {
-         e=L->data;
+         *e=L->data;
         return true;
     }
 }
@@ -110,7 +111,7 @@ bool chainGet(chain_nood *L,int i, float &e)
  */
 int chainLocate(chain_nood *L,float e)
 {
-    while (L->data != e && L->next != NUll)
+    while (L->data != e && L->next != NULL)
     {
         L=L->next;
     }
@@ -129,7 +130,7 @@ int chainLocate(chain_nood *L,float e)
  * @return true 插入成功
  * @return false 插入失败
  */
-bool chaininsert(chain_nood *&L,int i, float e)
+bool Chaininsert(chain_nood *L,int i, float e)
 {
     chain_nood *p;
     p=(chain_nood *)malloc(sizeof(chain_nood)); 
@@ -151,7 +152,7 @@ bool chaininsert(chain_nood *&L,int i, float e)
         {
             p->next=L->next;
             L->next=p;
-            retrun true;
+            return true;
         }
 }
 
@@ -163,7 +164,7 @@ bool chaininsert(chain_nood *&L,int i, float e)
  * @return true 删除成功
  * @return false 删除失败
  */
-bool chainDeleta(chain_nood *&L, int i)
+bool chainDeleta(chain_nood *L, int i)
 {
     chain_nood *p;
     int n=1;
@@ -191,7 +192,7 @@ bool chainDeleta(chain_nood *&L, int i)
  * @param s 保存每个结点值域的数组
  * @param n 数组长度，同时为结点长度
  */
-void chainCreateHead(chain_nood *&L, float s[], int n)
+void chainCreateHead(chain_nood *L, float s[], int n)
 {
     chain_nood *p;
     int i;
@@ -211,7 +212,7 @@ void chainCreateHead(chain_nood *&L, float s[], int n)
  * @param s 保存每个结点值域的数组
  * @param n 数组长度，同时为结点长度
  */
-void chainCreateTail(chain_nood *&L, float s[], int n)
+void chainCreateTail(chain_nood *L, float s[], int n)
 {
     chain_nood *p,*r;
     int i;
@@ -238,7 +239,7 @@ void chainCreateTail(chain_nood *&L, float s[], int n)
  * 
  * @param L 
  */
-void chain_two(chain_nood_two *&L)
+void chain_two(chain_nood_two *L)
 {
     L=(chain_nood_two *)malloc(sizeof(chain_nood_two));
     L->next=NULL;
@@ -252,8 +253,8 @@ void chain_two(chain_nood_two *&L)
  * @param a 储存结点内容的数组
  * @param n 结点个数
  */
-void CreateListF(chain_nood_two *&L,float a[],int n)
-{   chain_nood_twoeListF *s; 
+void CreateListF(chain_nood_two *L,float a[],int n)
+{   chain_nood_two *s;
     int i;
     L=(chain_nood_two *)malloc(sizeof(chain_nood_two)); //创建头结点
     L->before=L->next=NULL;	//前后指针域置为NULL
@@ -275,7 +276,7 @@ void CreateListF(chain_nood_two *&L,float a[],int n)
  * @param a 储存结点内容的数组
  * @param n 结点个数
  */
-void CreateListR(chain_nood_two *&L,float a[],int n)
+__attribute__((unused)) void CreateListR(chain_nood_two *L,float a[],int n)
 {   chain_nood_two *s,*r;
     int i;
     L=(chain_nood_two *)malloc(sizeof(chain_nood_two));    //创建头结点
@@ -299,7 +300,7 @@ void CreateListR(chain_nood_two *&L,float a[],int n)
  * @return true 插入成功
  * @return false 插入失败
  */
-bool ListInsert(chain_nood_two *&L,int i,float e)
+bool Listinsert(chain_nood_two *L,int i,float e)
 {   int j=0;
     chain_nood_two *p=L,*s;	      	//p指向头结点，j设置为0
     if(i<1)
@@ -332,7 +333,7 @@ bool ListInsert(chain_nood_two *&L,int i,float e)
  * @return true 删除失败
  * @return false 删除成功
  */
-bool ListDelete(chain_nood_two *&L,int i,float &e)
+ bool Listdelete(chain_nood_two *L,int i,float *e)
 {   int j=0; 
     chain_nood_two *p=L,*q; 		//p指向头结点，j设置为0
     if(i<1)
@@ -347,10 +348,10 @@ bool ListDelete(chain_nood_two *&L,int i,float &e)
     {	q=p->next;		//q指向第i个结点
 	if (q==NULL)	   	//当不存在第i个结点时返回false
 	    return false;
-	e=q->data;
+	*e=q->data;
 	p->next=q->next;		//从双单链表中删除q结点
 	if (q->next!=NULL)    	//若q结点存在后继结点
-        q->next->prior=p;	//修改q结点后继结点的前驱指针
+        q->next->before=p;	//修改q结点后继结点的前驱指针
 	free(q);		   	//释放q结点
 	return true;
     }
