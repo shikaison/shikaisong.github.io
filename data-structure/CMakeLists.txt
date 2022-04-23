@@ -1,20 +1,22 @@
 cmake_minimum_required(VERSION 3.21)
-project(data_structure C)
+project(data-structure)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 99)
 
-include_directories(.)
-include_directories(Inc)
-include_directories(linear-list)
-
-add_executable(data_structure
+add_executable(data-structure
+        main.cpp
         Inc/chain.h
-        Inc/chain_stack.h
+        Inc/graph.h
         Inc/main.h
         Inc/order.h
         Inc/stack.h
-        linear-list/chain.c
-        linear-list/chain_stack.c
-        linear-list/order.c
-        linear-list/stack.c
-        main.c)
+        Inc/tree.h
+        linear-list/chain.cpp
+        linear-list/graph.cpp
+        linear-list/order.cpp
+        linear-list/stack.cpp
+        linear-list/tree.cpp
+        )
+include_directories(Inc)
+file(GLOB_RECURSE SOURCES "linear-list/*.*")
+

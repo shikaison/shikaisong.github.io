@@ -24,6 +24,35 @@ CMAKE_AR:FILEPATH=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/ar.ex
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=Debug
 
+//CXX compiler
+CMAKE_CXX_COMPILER:FILEPATH=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/g++.exe
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_AR:FILEPATH=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/gcc-ar.exe
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/gcc-ranlib.exe
+
+//Flags used by the CXX compiler during all build types.
+CMAKE_CXX_FLAGS:STRING=
+
+//Flags used by the CXX compiler during DEBUG builds.
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
+
+//Flags used by the CXX compiler during MINSIZEREL builds.
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+//Flags used by the CXX compiler during RELEASE builds.
+CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+//Flags used by the CXX compiler during RELWITHDEBINFO builds.
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+//Libraries linked by default with all C++ applications.
+CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/gcc.exe
 
@@ -78,7 +107,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/data_structure
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Project
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/ld.exe
@@ -122,7 +151,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=data_structure
+CMAKE_PROJECT_NAME:STATIC=data-structure
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/ranlib.exe
@@ -205,13 +234,76 @@ CMAKE_STRIP:FILEPATH=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/st
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-data_structure_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
+Project_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
 
 //Value Computed by CMake
-data_structure_IS_TOP_LEVEL:STATIC=ON
+Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-data_structure_SOURCE_DIR:STATIC=E:/clion/data-structure
+Project_SOURCE_DIR:STATIC=E:/clion/data-structure
+
+//Value Computed by CMake
+data-_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
+
+//Value Computed by CMake
+data-_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+data-_SOURCE_DIR:STATIC=E:/clion/data-structure
+
+//Value Computed by CMake
+data-st_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
+
+//Value Computed by CMake
+data-st_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+data-st_SOURCE_DIR:STATIC=E:/clion/data-structure
+
+//Value Computed by CMake
+data-str_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
+
+//Value Computed by CMake
+data-str_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+data-str_SOURCE_DIR:STATIC=E:/clion/data-structure
+
+//Value Computed by CMake
+data-struc_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
+
+//Value Computed by CMake
+data-struc_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+data-struc_SOURCE_DIR:STATIC=E:/clion/data-structure
+
+//Value Computed by CMake
+data-structure_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
+
+//Value Computed by CMake
+data-structure_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+data-structure_SOURCE_DIR:STATIC=E:/clion/data-structure
+
+//Value Computed by CMake
+data_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
+
+//Value Computed by CMake
+data_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+data_SOURCE_DIR:STATIC=E:/clion/data-structure
+
+//Value Computed by CMake
+zhangdie_BINARY_DIR:STATIC=E:/clion/data-structure/cmake-build-debug-mingw
+
+//Value Computed by CMake
+zhangdie_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+zhangdie_SOURCE_DIR:STATIC=E:/clion/data-structure
 
 
 ########################
@@ -236,6 +328,24 @@ CMAKE_COMMAND:INTERNAL=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/cmake/win/
 CMAKE_CPACK_COMMAND:INTERNAL=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/cmake/win/bin/cpack.exe
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=D:/Toolbox App/apps/CLion/ch-0/213.7172.20/bin/cmake/win/bin/ctest.exe
+//ADVANCED property for variable: CMAKE_CXX_COMPILER
+CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
+CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
+CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_FLAGS
+CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
+CMAKE_CXX_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_FLAGS_MINSIZEREL
+CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_FLAGS_RELEASE
+CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
+CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_STANDARD_LIBRARIES
+CMAKE_CXX_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
