@@ -25,6 +25,7 @@ int main(void)
 //    Graph();
 //    free_min_Prim();
 //    free_min_Kruskal();
+    maze();
     return 0;
 }
 
@@ -41,12 +42,23 @@ void Graph(void)
 
 void Stack(void)
 {
-    SqStack *Stack;
-    float a;
-    InitStack(Stack);
-    Push(Stack,1.0);
-    Pop(Stack,a);
-    printf("%f",a);
+//    SqStack *Stack;
+//    float a;
+//    InitStack(Stack);
+//    Push(Stack,1.0);
+//    Pop(Stack,a);
+//    printf("%f",a);
+    BTNode *b;
+    CreateBTree(b,"A(B(D,E(H(J,K(L,M(,N))))),C(F,G(,I)))");
+    printf("二叉树b:\n");
+    DispBTree(b);
+    printf("\n先序非递归遍历序列:\n");
+    PreOrder(b);
+    printf("中序非递归遍历序列:\n");
+    InOrder(b);
+    printf("后序非递归遍历序列:\n");
+    PostOrder(b);
+    DestroyBTree(b);
 }
 
 void free_min_prim(void)
@@ -69,6 +81,13 @@ void free_min_Kruskal(void)
     DispGraph(g);
     printf("生成的最小树为:\n");
     Kruskal(g);
+}
+
+void maze(void)
+{
+    printf("迷宫的所有路径如下:\n");
+    mgpath(1,1,M,N);
+
 }
 
 void debug(void)

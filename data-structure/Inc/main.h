@@ -9,6 +9,7 @@
 #include "stack.h"
 #include "graph.h"
 #include "tree.h"
+#include "maze.h"
 
 /**
  * @brief 图任务
@@ -32,6 +33,11 @@ void free_min_Prim(void);
  *
  */
 void free_min_Kruskal(void);
+
+/**
+ * @brief 迷宫最短路径
+ */
+void maze(void);
 
 /**
  * @brief 测试函数

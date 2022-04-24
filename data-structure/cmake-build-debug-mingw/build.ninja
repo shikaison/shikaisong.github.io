@@ -103,6 +103,13 @@ build CMakeFiles/data-structure.dir/linear-list/tree.cpp.obj: CXX_COMPILER__data
   OBJECT_DIR = CMakeFiles\data-structure.dir
   OBJECT_FILE_DIR = CMakeFiles\data-structure.dir\linear-list
 
+build CMakeFiles/data-structure.dir/linear-list/maze.cpp.obj: CXX_COMPILER__data-structure_Debug E$:/clion/data-structure/linear-list/maze.cpp || cmake_object_order_depends_target_data-structure
+  DEP_FILE = CMakeFiles\data-structure.dir\linear-list\maze.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -IE:/clion/data-structure/Inc
+  OBJECT_DIR = CMakeFiles\data-structure.dir
+  OBJECT_FILE_DIR = CMakeFiles\data-structure.dir\linear-list
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target data-structure
@@ -111,7 +118,7 @@ build CMakeFiles/data-structure.dir/linear-list/tree.cpp.obj: CXX_COMPILER__data
 #############################################
 # Link the executable data-structure.exe
 
-build data-structure.exe: CXX_EXECUTABLE_LINKER__data-structure_Debug CMakeFiles/data-structure.dir/main.cpp.obj CMakeFiles/data-structure.dir/linear-list/chain.cpp.obj CMakeFiles/data-structure.dir/linear-list/graph.cpp.obj CMakeFiles/data-structure.dir/linear-list/order.cpp.obj CMakeFiles/data-structure.dir/linear-list/stack.cpp.obj CMakeFiles/data-structure.dir/linear-list/tree.cpp.obj
+build data-structure.exe: CXX_EXECUTABLE_LINKER__data-structure_Debug CMakeFiles/data-structure.dir/main.cpp.obj CMakeFiles/data-structure.dir/linear-list/chain.cpp.obj CMakeFiles/data-structure.dir/linear-list/graph.cpp.obj CMakeFiles/data-structure.dir/linear-list/order.cpp.obj CMakeFiles/data-structure.dir/linear-list/stack.cpp.obj CMakeFiles/data-structure.dir/linear-list/tree.cpp.obj CMakeFiles/data-structure.dir/linear-list/maze.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\data-structure.dir

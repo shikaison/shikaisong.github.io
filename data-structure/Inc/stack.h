@@ -4,13 +4,14 @@
 
 
 #define MaxSize 10000
-typedef  float ElemType;
+typedef  char ElemType;
 
 typedef struct stack
 {
     ElemType data[MaxSize];
     int top;
 }SqStack;
+
 
 /**
  * @brief 建立一个新的空栈
@@ -24,7 +25,7 @@ void InitStack(SqStack *&s);
  *
  * @param s 指向栈的指针
  */
-void DestoryStack(SqStack *&s);
+void DestroyStack(SqStack *&s);
 
 /**
  * @brief 判断栈是否为空
@@ -64,5 +65,6 @@ bool Pop(SqStack *&s, ElemType &e);
  * @return false 取出失败
  */
 bool GetTop(SqStack *s, ElemType &e);
+
 
 #endif

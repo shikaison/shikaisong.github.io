@@ -20,7 +20,7 @@ void InitStack(SqStack *&s)
  * 
  * @param s 指向栈的指针
  */
-void DestoryStack(SqStack *&s)
+void DestroyStack(SqStack *&s)
 {
     free(s);
 }
@@ -86,7 +86,4 @@ bool GetTop(SqStack *s, ElemType &e)
     e=s->data[s->top];
     return true;
 }
-
-
-
 

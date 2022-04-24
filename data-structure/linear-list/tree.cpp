@@ -157,3 +157,214 @@ void Kruskal(MatGraph g)
         j++;
     }
 }
+
+void PreOrder(BTNode *b)
+{
+    BTNode *p,*St[MaxSize];
+    int top=-1;
+    if(b!=NULL)
+    {
+        top++;
+        St[top]=b;
+        while(top>-1)
+        {
+            p=St[top];
+            top--;
+            printf("%c",p->data);
+            if(p->rchild!=NULL)
+            {
+                top++;
+                St[top]=p->rchild;
+
+            }
+            if(p->lchild!=NULL)
+            {
+                top++;
+                St[top]=p->rchild;
+            }
+        }
+        printf("\n");
+    }
+
+}
+
+void InOrder(BTNode *b)
+{
+    BTNode *St[MAXSIZE],*p;
+    int top=-1;
+    if(b!=NULL)
+    {
+        p=b;
+        while(top>-1 || p!= NULL)
+        {
+            while(p!=NULL)
+            {
+                top++;
+                St[top]=p;
+                p=p->lchild;
+            }
+            if(top>-1)
+            {
+                p=St[top];
+                top--;
+                printf("%c",p->data);
+                p=p->rchild;
+            }
+        }
+        printf("\n");
+    }
+}
+
+void PostOrder(BTNode *b)
+{
+    BTNode *St[MAXSIZE],*p;
+    int top=-1;
+    bool  flag;
+    if(b!=NULL)
+    {
+        do
+        {
+            while(b!=NULL)
+            {
+                top++;
+                St[top]=b;
+                b=b->lchild;
+            }
+            p=NULL;
+            flag=true;
+            while(top!=-1 && flag)
+            {
+                b=St[top];
+                if(b->rchild==p)
+                {
+                    printf("%c",b->data);
+                    top--;
+                    p=b;
+                }
+                else
+                {
+                    b=b->rchild;
+                    flag=false;
+                }
+            }
+        }while(top!=-1);
+        printf("\n");
+    }
+}
+
+void CreateBTree(BTNode *&b,char *str)
+{
+    BTNode *St[MAXSIZE],*p;
+    int top=-1,k,j=0;
+    char ch;
+    b=NULL;
+    ch=str[j];
+    while(ch!='\0')
+    {
+        switch(ch)
+        {
+            case '(':
+                top++;
+                St[top]=p;
+                k=1;
+                break;
+            case ')':
+                top--;
+                break;
+            case ',':
+                k=2;
+                break;
+            default:
+                p=(BTNode *)malloc(sizeof(BTNode));
+                p->data=ch;
+                p->lchild=p->rchild=NULL;
+                if(b==NULL)
+                    b=p;
+                else
+                {
+                    switch(k)
+                    {
+                        case 1:St[top]->lchild=p;break;
+                        case 2:St[top]->rchild=p;break;
+                    }
+                }
+        }
+        j++;
+        ch=str[j];
+    }
+}
+
+void DestroyBTree(BTNode *&b)
+{
+    if (b==NULL)
+        return ;
+    else
+    {
+        DestroyBTree(b->lchild);
+        DestroyBTree(b->rchild);
+        free(b);      //剩下一个结点b，直接释放
+    }
+}
+
+
+BTNode *FindNode(BTNode *b,ElemType x)
+{
+    BTNode *p;
+
+    if (b==NULL)
+        return NULL;
+
+    else if (b->data==x)
+        return b;
+
+    else
+    {
+        p=FindNode(b->lchild,x);
+        if (p!=NULL)
+            return p;
+        else
+            return FindNode(b->rchild,x);
+    }
+}
+
+BTNode *LchildNode(BTNode *p)
+{
+    return p->lchild;
+}
+
+BTNode *RchildNode(BTNode *p)
+{
+    return p->rchild;
+}
+
+int BTHeight(BTNode *b)
+{
+    int lchilddep,rchilddep;
+    if (b==NULL)
+        return(0); 	//空树的高度为0
+    else
+    {
+        lchilddep=BTHeight(b->lchild);
+        //求左子树的高度为lchilddep
+        rchilddep=BTHeight(b->rchild);
+        //求右子树的高度为rchilddep
+        return(lchilddep>rchilddep)? (lchilddep+1):(rchilddep+1);
+    }
+}
+
+void DispBTree(BTNode *b)
+{  if (b!=NULL)
+    {
+    printf("%c",b->data);
+        if (b->lchild!=NULL || b->rchild!=NULL)
+        {
+            printf("(");
+            DispBTree(b->lchild);//递归处理左子树
+            if (b->rchild!=NULL)
+                printf("，");
+            DispBTree(b->rchild);//递归处理右子树
+            printf(")");
+        }
+    }
+}
+

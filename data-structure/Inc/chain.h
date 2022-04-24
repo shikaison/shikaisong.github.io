@@ -3,7 +3,7 @@
 #define __CHAIN_H__
 #include "main.h"
 #include <stdbool.h>
-typedef float  ElemType;
+typedef float  ElemType2;
 
 typedef struct noods
 {
@@ -142,7 +142,7 @@ void CreateListF(chain_nood_two *L,float a[],int n);
  * @param a 储存结点内容的数组
  * @param n 结点个数
  */
-void CreateListR(chain_nood_two *L,ElemType a[],int n);
+void CreateListR(chain_nood_two *L,ElemType2 a[],int n);
 
 /**
  * @brief 向双链表中的指定位置插入结点

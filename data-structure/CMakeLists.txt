@@ -11,11 +11,13 @@ add_executable(data-structure
         Inc/order.h
         Inc/stack.h
         Inc/tree.h
+        Inc/maze.h
         linear-list/chain.cpp
         linear-list/graph.cpp
         linear-list/order.cpp
         linear-list/stack.cpp
         linear-list/tree.cpp
+        linear-list/maze.cpp
         )
 include_directories(Inc)
 file(GLOB_RECURSE SOURCES "linear-list/*.*")
