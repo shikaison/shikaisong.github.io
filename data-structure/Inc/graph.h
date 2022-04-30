@@ -55,7 +55,7 @@ typedef struct
  * @param n 实际顶点个数
  * @param e 实际边数
  */
-void CreateGraph(MatGraph &g,int A[][MAXVEX],int n,int e);
+void CreateGraph(MatGraph &g,int A[MAXVEX][MAXVEX],int n,int e);
 
 /**
  * @brief 输出图

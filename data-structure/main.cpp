@@ -22,10 +22,10 @@ int main(void)
 {
 
 //    Stack();
-//    Graph();
+    Graph();
 //    free_min_Prim();
 //    free_min_Kruskal();
-    maze();
+//    maze();
     return 0;
 }
 
@@ -34,9 +34,10 @@ void Graph(void)
 {
     AdjGraph *aGraph;
     MatGraph mGraph;
-    CreateGraphList(aGraph,data,10,9);
+    CreateGraphList(aGraph,data,6,10);
     printf("аз╫с╠М");
     DispGraphList(aGraph);
+    DestroyGraph(aGraph);
 
 }
 
@@ -61,7 +62,7 @@ void Stack(void)
     DestroyBTree(b);
 }
 
-void free_min_prim(void)
+void free_min_Prim(void)
 {
     MatGraph g;
     int n=6,e=10;

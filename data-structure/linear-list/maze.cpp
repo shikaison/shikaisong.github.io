@@ -36,7 +36,7 @@ void dispminpath(void)
     printf("³¤¶È:%d\n",minlen);
     printf("Â·¾¶:");
     for(int k=0;k<minlen;k++)
-        printf("(%d, %d)",St[k].i,St[k].j);
+        printf("(%d, %d)",Path[k].i,Path[k].j);
     printf("\n");
 
 }
@@ -87,7 +87,7 @@ void mgpath(int xi,int yi,int xe,int ye)
                     j1=j-1;
                     break;
             }
-            if(mg[i][j]==0)
+            if(mg[i1][j1]==0)
                 find=true;
         }
         if(find)

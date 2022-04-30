@@ -55,7 +55,7 @@ int Degree2(MatGraph g,int v)	 //求有向图中顶点的度
     return d;
 }
 
-void CreateGraphList(AdjGraph *&G,int A[][MAXVEX],int n,int e)
+void CreateGraphList(AdjGraph *&G,int A[MAXVEX][MAXVEX],int n,int e)
 {
     int i,j;
     ArcNode *p;
@@ -65,7 +65,7 @@ void CreateGraphList(AdjGraph *&G,int A[][MAXVEX],int n,int e)
 
     for (i=0;i<n;i++)	//检查A中每个元素
         for (j=n-1;j>=0;j--)
-            if (A[i][j]>0 && A[i][j]<INF)	      //存在一条边
+            if (A[i][j]!=0 && A[i][j]!=INF)	      //存在一条边
              {
                 p=(ArcNode *)malloc(sizeof(ArcNode));  //创建结点p
                 p->adjvex=j;
